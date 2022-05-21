@@ -5,6 +5,7 @@ const path = require("path");
   const pathToFolder = path.join(__dirname, "secret-folder");
   try {
     const files = await fs.readdir(pathToFolder);
+    //console.log(files); // возвращает массив файлов и папок
 
     for (const file of files) {
       const stats = await fs.stat(path.join(pathToFolder, file));
