@@ -2,9 +2,6 @@ const fs = require("fs");
 const path = require("path");
 
 const pathSrc = path.join(__dirname, "styles");
-// const pathDest = path.join(__dirname, "files-copy");
-
-const { stdout } = process;
 
 (async () => {
   //Чтение содержимого папки styles
@@ -25,6 +22,5 @@ const { stdout } = process;
       const fileData = await promiseFileData.toString();
       output.write(fileData);
     }
-    //console.log(file);
   }
 })();
